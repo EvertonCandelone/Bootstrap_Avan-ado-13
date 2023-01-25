@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap Avançado</title>
+    <link rel="stylesheet" href="./Bootstrap/bootstrap.min.css">
+</head>
+<style>
+        #cabecalho {
+        position: sticky;
+        top: 0;
+        left: 0;
+        background-color: rgb(197, 197, 197);
+    }
+    .navbar-nav .nav-link.active {
+        color: white;
+    }
+    .nav-link {
+        text-align: center;
+    }
+    section {
+        padding-top: 66px;
+    }
+    .col img, li img, .container {
+        max-width: 100%;
+    }
+    .col {
+        padding-top: 16px;
+    }
+    .col-4 img {
+        max-width: 100%;
+    }
+    @media screen and (max-width: 767px) {
+        .row {
+            max-width: 100%;
+            display: block;
+        }
+        .col-4 {
+        width: 100%;
+    }
+    }
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            .row, .card {
+            max-width: 100%;
+            display: grid;
+            grid-gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+        .col-4 {
+        width: 100%;
+    }
+        }
+
+
+</style>
+<body>
+    <header id="cabecalho">
+        <div class="container">
+        <div class="navbar navbar-expand-lg">
+                <h1>EBAC Eletrônicos</h1>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                    <ul class="nav navbar-nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#inicio">Início</a>
+                        </li class="nav-item">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#pro">Produtos</a>
+                        </li class="nav-item">
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+        <div id="carousel-lc" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div data-bs-interval="1000" class="carousel-item active">
+                <img class="d-block w-100" src="./IMG/mobile-605422.jpg">
+            </div>
+            <div data-bs-interval="3000" class="carousel-item">
+                <img class="d-block w-100" src="./IMG/macbook-1093641.jpg">
+            </div>
+            <div data-bs-interval="3000" class="carousel-item">
+                <img class="d-block w-100" src="./IMG/audio-7276511.jpg">
+            </div>
+            <button data-bs-target="#carousel-lc" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button data-bs-target="#carousel-lc" data-bs-slide="next" class="carousel-control-next" type="button">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel-lc" class="active" data-bs-slide-to="0"></button>
+                <button type="button" data-bs-target="#carousel-lc" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel-lc" data-bs-slide-to="2"></button>
+            </div>
+    </div>
+    <div data-bs-spy="scroll" data-bs-target="#cabecalho">
+        <section id="inicio">
+    <div class="container">
+            <h2>Início</h2>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        Fones
+                    </div>
+                    <img src="IMG/audio-7276511.jpg" />
+                    <div class="card-body">
+                        <h4 class="card-title">Fone</h4>
+                        <h5 class="card-subtitle">Fone da marca tal</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea reprehenderit eos 
+                        </p>
+                        <a href="#" class="btn btn-primary">link</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        Mecbooks
+                    </div>
+                    <img src="./IMG/macbook-1093641.jpg" />
+                    <div class="card-body">
+                        <h4 class="card-title">Macbook</h4>
+                        <h5 class="card-subtitle">Macbook apple</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea reprehenderit eos 
+                        </p>
+                        <a href="#" class="btn btn-primary">link</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        Smartphone
+                    </div>
+                    <img src="./IMG/mobile-605422.jpg" />
+                    <div class="card-body">
+                        <h4 class="card-title">Smartphone</h4>
+                        <h5 class="card-subtitle">celular marca tal</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea reprehenderit eos 
+                        </p>
+                        <a href="#" class="btn btn-primary">link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="pro">
+        <div class="container">
+            <h2>Produtos</h2>
+        <div class="row">
+            <div class="col-4">
+                produtos
+                <img src="./IMG/mobile-605422.jpg" alt="">
+            </div>
+            <div class="col-4">
+                Produtos
+                <img src="./IMG/mobile-605422.jpg" alt="">
+            </div>
+            <div class="col-4">
+                Produtos
+                <img src="./IMG/mobile-605422.jpg" alt="">
+            </div>
+            <div class="col-4">
+                Produtos
+                <img src="./IMG/mobile-605422.jpg" alt="">
+            </div>
+            <div class="col-4">
+                Produtos
+                <img src="./IMG/mobile-605422.jpg" alt="">
+            </div>
+            <div class="col-4">
+                Produtos
+                <img src="./IMG/mobile-605422.jpg" alt="">
+            </div>
+        </div>
+        </div>
+    </section>
+    </div>
+<script src="./Bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>
